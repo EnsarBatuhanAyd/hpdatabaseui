@@ -1,5 +1,5 @@
 .App{
-    background-image: url(./../img/bg.png);
+    background: linear-gradient(107.19deg, #576182 0.53%, #1FC5A8 100%);
     width:100vw;
     height:100vh;
 }
@@ -30,19 +30,138 @@
 .top-bar{
     height: 100%;
     width: 97%;
-    border: 1px solid white;
+    
     background: linear-gradient(209.8deg, rgba(87, 97, 130, 0.1) 0%, rgba(31, 197, 168, 0.1) 100%);
     box-shadow: 35px 33px 78px rgba(0, 0, 0, 0.2);
     border-radius: 73px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    display: flex;
+    flex-direction: row;
+   
 }
 .data-area{
     height: 95%;
     width: 97%;
-    border: 1px solid white;
+   
     border-radius:10em;
     background: linear-gradient(209.8deg, #576182 0%, #1FC5A8 100%);
     box-shadow: 35px 33px 84px rgba(0, 0, 0, 0.65);
     border-radius: 73px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+   
+}
+.logo-area{
+    width:20%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-color: transparent;
+}
+.search-area{
+    width:60%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+
+}
+.profile-area{
+    width:20%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.logo{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.search-box{
+    width:40em;
+    height:3em;
+    border: 0.1em solid;
+    border-color:white;
+    border-radius: 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+}
+.profile-box{
+    width:10em;
+    height: 3em;
+    border: 0.1em solid;
+    border-color:white;
+    border-radius: 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pimg-box{
+    width:3em;
+    height: 3em;
+    border: 0.1em solid;
+    border-color:white;
+    border-radius: 2em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headers-area{
+    width:100%;
+    height: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.datas-area{
+    width:100%;
+    height: 85%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.table-titles{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    list-style-type: none;
+   color: white;
+
+}
+.table-titles li{
+    margin: 8em;
+    
+}
+.table-datas{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    list-style-type: none;
+   color: white;
+
+}
+.table-datas li{
+    margin-right:5.1em;
+    margin-left:5.1em;
+    
+}
+.line{
+    color: aliceblue;
 }
