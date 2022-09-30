@@ -1,6 +1,27 @@
 import "./Interface.css";
+import { useState, useEffect } from "react";
 import logo from "./../img/logo.png";
 function RealtimePage() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+ 
+  useEffect(() => {
+   fetch(`https://noveria-software-website.herokuapp.com/api/v1/forms`)
+   .then((response) => response.json())
+   .then((actualData) => {
+    setData(actualData);
+    setError(null);
+  })
+  .catch((err) => {
+    setError(err.message);
+    setData(null);
+  })
+  .finally(() => {
+    setLoading(false);
+  });
+  }, []);
+  
   return (
     <div className="App">
       <div className="App-Content">
@@ -33,102 +54,21 @@ function RealtimePage() {
             </div>
             <hr className="line"></hr>
             <div className="datas-area">
-              <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
-              </ul>
-              <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
-              </ul>
-                 <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
-              </ul>
-              <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
-              </ul>
-              <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
-              </ul>
+            {data &&
+          data.map(({ id, _id, clientMail ,clientFullName,clientTelephoneNumber }) => (
             
-
-                <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
+            
+            <ul key={id} className="table-datas">
+                <li>{_id}</li>
+                <li>{clientMail}</li>
+                <li>{clientTelephoneNumber}</li>
+                <li>{clientFullName}</li>
                 <li>19 Sep 2022 13.28.07:55</li>
                 <li>Edit/Delete</li>
               </ul>
-            
-                <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
-              </ul>
-            
-              <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
-              </ul>
-            
-                <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
-              </ul>
-            
-                <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
-              </ul>
-            
-                <ul className="table-datas">
-                <li>63245f3e0a35a8ea987f3e73</li>
-                <li>deneme@gmail.com</li>
-                <li>5354567890</li>
-                <li>isim ve soyismi</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
-              </ul>
-            
+             
+          ))}
+              
 
             
             </div>
