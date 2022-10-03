@@ -1,0 +1,147 @@
+.Login{
+    background: linear-gradient(107.19deg, #576182 0.53%, #1FC5A8 100%);
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-Login{
+    background: linear-gradient(209.8deg, #576182 0%, #1FC5A8 100%);
+    box-shadow: 35px 33px 63px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 55%;
+    width:  20%;
+    border-radius:1em;
+    
+    
+}   
+.Login-logo-title-area{
+    height: 50%;
+    width: 100%;
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+.Login-form{
+
+    height: 50%;
+    width: 100%;
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+.Login-logo-title-area-content{
+    margin-left:-2em;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction:column;
+  
+
+}
+.logo{
+    background-image: url("./../../Images/logo.png");
+    width:4em;
+    height: 1.6em;
+    background-size: cover;
+  
+}
+.main-title{
+    margin:2em;
+    font-size: 1.2em;
+    font-family:"Open Sans";
+    font-weight:lighter;
+    color:#fff;
+}
+.device-title{
+    font-size: 0.8em;
+    font-family:"Open Sans";
+    font-weight:lighter;
+}
+.Login-enterance-area{
+    height: 100%;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+   
+
+}
+.Login-enterance{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    font-size: 0.8em;
+    font-family:"Open Sans";
+    font-weight:lighter;
+
+}
+
+
+
+.Login-enterbox{
+    margin:1em;
+    width:20em;
+    height:3em;
+    background-color:transparent;
+    border-radius: 5em;
+    border: 0.01em solid;
+    border-color: white;
+    color: white;
+    
+    text-align: center;
+    font-family: "Open Sans";
+    font-weight: lighter;
+}
+.Button-enter{
+    width: 60%;
+    height:70%;
+    background-color:#ffffff;
+    border-radius: 5em;
+    border: 1px solid;
+    border-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size:0.8em;
+    font-family: "Open Sans";
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+    text-decoration:none ;
+}
+.Login-button-area{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20%;
+    width: 70%;
+
+}
+.label{
+    font-family: "Open Sans";
+    font-weight: lighter;
+    color: white;
+    font-size: 0.8em;
+    margin:1em;
+}
+
+.error-decoration{
+    font-family: "Open Sans";
+    font-weight: normal;
+    color: rgb(255, 0, 0);
+    font-size: 1.2em;
+    margin:1em;
+}

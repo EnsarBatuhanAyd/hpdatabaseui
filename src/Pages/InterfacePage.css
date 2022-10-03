@@ -1,0 +1,22 @@
+.App-Interface{
+    background-color: #1b2745eb;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+  }
+  .App-Content-Interface{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+  }

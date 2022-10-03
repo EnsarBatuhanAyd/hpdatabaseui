@@ -1,7 +1,7 @@
 import "./Interface.css";
 import { useState, useEffect } from "react";
 import logo from "./../img/logo.png";
-function RealtimePage() {
+function Interface() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -79,4 +79,4 @@ function RealtimePage() {
   );
 }
 
-export default RealtimePage;
+export default Interface;

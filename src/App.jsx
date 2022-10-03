@@ -2,21 +2,20 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Interface from "./Pages/Interface";
+import Interface from "./Pages/InterfacePage";
 
-// import Login from "./Pages/LoginPage";
+import Login from "./Pages/LoginPage";
 function App() {
   return (
-    
-    <Router >
+    <Router>
       <Switch>
-     
-        <Route path="/">
+       
+        <Route path="/interface">
           <Interface></Interface>
         </Route>
-        {/* <Route  path="/">
+        <Route path="/">
           <Login />
-        </Route> */}
+        </Route>
       </Switch>
     </Router>
   );
