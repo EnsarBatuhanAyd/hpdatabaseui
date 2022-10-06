@@ -145,3 +145,14 @@
     font-size: 1.2em;
     margin:1em;
 }
+@media (max-width:1700px) {
+
+    .bg-Login{
+
+        height: 55%;
+        width:  25em;
+
+        
+        
+    }       
+}
