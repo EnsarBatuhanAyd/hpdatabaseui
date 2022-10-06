@@ -48,23 +48,26 @@ function Interface() {
                 <li>E-Mail</li>
                 <li>Number</li>
                 <li>Name</li>
+                <li>Demo Code</li>
                 <li>Time</li>
-                <li>Edit/Delete</li>
+                {/* <li>Edit/Delete</li> */}
               </ul>
             </div>
             <hr className="line"></hr>
             <div className="datas-area">
             {data &&
-          data.map(({ id, _id, clientMail ,clientFullName,clientTelephoneNumber }) => (
+          data.map(({ id, _id, clientMail ,clientFullName,clientTelephoneNumber, clientDemoCode, clientTime }) => (
+            
             
             
             <ul key={id} className="table-datas">
-                <li>{_id}</li>
+                <li className="idclass">{_id}</li>
                 <li>{clientMail}</li>
                 <li>{clientTelephoneNumber}</li>
                 <li>{clientFullName}</li>
-                <li>19 Sep 2022 13.28.07:55</li>
-                <li>Edit/Delete</li>
+                <li>{clientDemoCode}</li>
+                <li>{clientTime}  </li>
+                {/* <li>Edit/Delete</li> */}
               </ul>
              
           ))}
