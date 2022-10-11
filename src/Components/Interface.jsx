@@ -1,11 +1,12 @@
 import "./Interface.css";
 import { useState, useEffect } from "react";
 import logo from "./../img/logo.png";
+
 function Interface() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
- 
+  const dateepoch = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' })
   useEffect(() => {
    fetch(`https://noveria-software-website.herokuapp.com/api/v1/forms`)
    .then((response) => response.json())
@@ -55,18 +56,20 @@ function Interface() {
             </div>
             <hr className="line"></hr>
             <div className="datas-area">
+              
             {data &&
           data.map(({ id, _id, clientMail ,clientFullName,clientTelephoneNumber, clientDemoCode, clientTime }) => (
             
             
             
             <ul key={id} className="table-datas">
+              
                 <li className="idclass">{_id}</li>
                 <li>{clientMail}</li>
                 <li>{clientTelephoneNumber}</li>
                 <li>{clientFullName}</li>
                 <li>{clientDemoCode}</li>
-                <li>{clientTime}  </li>
+                <li>{dateepoch.format(clientTime)}</li>
                 {/* <li>Edit/Delete</li> */}
               </ul>
              
